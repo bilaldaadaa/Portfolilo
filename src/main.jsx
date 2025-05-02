@@ -4,9 +4,8 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Page/Root.jsx'
-import SallaStore from './Page/SallaStore.jsx'
-import Flora from './Page/Flora.jsx'
 import MainPage from './Page/MainPage.jsx'
+import Project from './Page/Project.jsx'
 
 const root = createBrowserRouter([{
   path: '/bilalportfolio/',
@@ -15,15 +14,10 @@ const root = createBrowserRouter([{
     path: '',
     element: <MainPage />
   }, {
-    path: "sallastore",
-    element: <SallaStore />
-  },
-  {
-    path: "flora",
-    element: <Flora />
+    path: "project/:id",
+    element: <Project />
   }
   ]
-
 }])
 
 

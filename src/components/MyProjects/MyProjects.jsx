@@ -1,7 +1,30 @@
-import MyProjectsCard from "../MyProjectsCard/MyProjectsCard"
+import Flora from "../../assets/img/flora.png"
+import SallaStore from "../../assets/img/sallastore.png"
+import arrowInsideCircle from "../../assets/img/arrow_inside_circle.svg"
+import { Link } from "react-router-dom"
 
 
-const MyProjects = ({ title, complementstitle, btn, projects, imgbtn, onclick }) => {
+
+const MyProjects = ({ title, complementstitle, btn, imgbtn, onclick }) => {
+
+    const projects = [{
+        id: "flora",
+        name: "Flora",
+        img: Flora,
+        demo: " https://bilaldaadaa.github.io/flora/",
+        des: "Html-css3"
+
+    }, {
+        id: "sallastore",
+        name: "Salla Store",
+        img:  SallaStore ,
+        demo: " https://bilaldaadaa.github.io/flora/",
+        des: "Html-css3"
+    }]
+
+
+
+
     return (
         <div id="project" className="px-7 lg:px-[70px] mb-[94px] ">
             <div className="flex justify-between items-end mb-14 flex-wrap">
@@ -17,15 +40,18 @@ const MyProjects = ({ title, complementstitle, btn, projects, imgbtn, onclick })
                 </a>
             </div>
             <div className=" flex items-center justify-center lg:justify-between flex-wrap gap-6">
-                {projects.map((project, index) => {
+                {projects.map((project) => {
                     return (
-                        <MyProjectsCard key={index}
-                            projectImg={project.img}
-                            projectname={project.name}
-                            projectdescription={project.des}
-                            to={project.to}
-                            demoProject={project.demo}
-                        />
+                        <div className="sm:w-[370px] max-h-full" key={project.id}>
+                            <a href={project.demo}><img src={project.img} alt="" className="min-w-full mb-8 rounded-lg" /></a>
+                            <div className="flex items-center justify-between">
+                                <div className="">
+                                    <h4 className="font-poppins font-semibold text-[22px] leading-[33px] text-[#1D2130] mb-[11px] dark:text-white">{project.name}</h4>
+                                    <p className="font-poppins text-[#1D2130] font-normal text-base dark:text-white">{project.des}</p>
+                                </div>
+                                <Link to={`/bilalportfolio/project/${project.id}`}><img src={arrowInsideCircle} alt="" className="cursor-pointer" /></Link>
+                            </div>
+                        </div>
                     )
                 })}
             </div>

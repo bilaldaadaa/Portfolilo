@@ -17,15 +17,13 @@ import Lines from "../assets/img/Lines.svg"
 import figma from "../assets/img/figma.png"
 import Circles from "../assets/img/Circles.png"
 import LInes_three from "../assets/img/LInes_three.svg"
-import sallastore from "../assets/img/sallastore.png"
-import flora from "../assets/img/flora.png"
+
 
 
 
 
 const MainPage = () => {
     const [isVisible, setIsVisible] = useState(false)
-
 
 
     const handleScroll = () => {
@@ -105,7 +103,6 @@ const MainPage = () => {
                 complementstitle="Projects"
                 btn="View Github"
                 imgbtn={<FaArrowRight className="-rotate-45 w-5 h-5" />}
-                projects={[{ img:sallastore , name: "A Small Store", des: "HTML-css3", to: 'sallastore', demo: "https://bilaldaadaa.github.io/salla-store/" }, { img:flora , name: "Discover places", des: "Html-css3", to: 'flora', demo: "https://bilaldaadaa.github.io/flora/" }]}
             />
             <Contact
 
