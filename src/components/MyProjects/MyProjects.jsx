@@ -57,7 +57,7 @@ const MyProjects = ({ title, complementstitle, btn, imgbtn, onclick }) => {
                                     <h4 className="font-poppins font-semibold text-[22px] leading-[33px] text-[#1D2130] mb-[11px] dark:text-white">{project.name}</h4>
                                     <p className="font-poppins text-[#1D2130] font-normal text-base dark:text-white">{project.des}</p>
                                 </div>
-                                <Link to={`/bilalportfolio/project/${project.id}`}><img src={arrowInsideCircle} alt="" className="cursor-pointer" /></Link>
+                                <Link to={`/project/${project.id}`}><img src={arrowInsideCircle} alt="" className="cursor-pointer" /></Link>
                             </div>
                         </div>
                     )

@@ -12,7 +12,7 @@ const NavBar = ({ name, items, img, onclick, active }) => {
     };
     return (
         <nav className=" flex justify-between items-center px-7 py-10 mb-[54px] fixed w-full top-0 z-20 bg-white  dark:bg-[#1B2431] duration-1000 lg:px-[70px] ">
-            <h1 className="font-poppins  font-semibold text-2xl text-[#1D2130] dark:text-white "><Link to="/bilalportfolio/">{name}</Link></h1>
+            <h1 className="font-poppins  font-semibold text-2xl text-[#1D2130] dark:text-white "><Link to="/">{name}</Link></h1>
             <ul className=" hidden justify-between items-center gap-6 lg:flex ">
                 {
                     items.map((item, index) => {

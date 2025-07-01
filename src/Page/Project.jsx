@@ -24,7 +24,7 @@ const projects = [
         Framework: "no framework",
         Libraries: "no libraries",
         repo: "https://github.com/bilaldaadaa/Flora",
-        to: "/bilalportfolio/project/flora",
+        to: "/project/flora",
         des2: "HTML-css3"
 
     },
@@ -39,7 +39,7 @@ const projects = [
         Framework: "no framework",
         Libraries: "no libraries",
         repo: "https://github.com/bilaldaadaa/salla-store",
-        to: "/bilalportfolio/project/sallastore",
+        to: "/project/sallastore",
         des2: "Html-css3"
     },
     {
@@ -54,7 +54,7 @@ const projects = [
         Framework: "React",
         Libraries: "axios , toast , react-router-dom , react-icont ",
         demo: "https://dashboard-3ptb.vercel.app/",
-        to: "/bilalportfolio/project/dashborad",
+        to: "/project/dashborad",
         des2: "React - tailwindCss"
 
     }
