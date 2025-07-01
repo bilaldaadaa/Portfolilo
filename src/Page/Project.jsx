@@ -9,37 +9,56 @@ import { MdOutlineZoomOutMap } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import githubImg from "../assets/img/arrow_inside_circle.svg"
 import MyProjectsCard from "../components/MyProjectsCard/MyProjectsCard"
+import dashboard from "../assets/img/dashboard.png"
 
 
-const projects = [{
-    id: "flora",
-    name: "Flora",
-    img: Flora,
-    demo: " https://bilaldaadaa.github.io/flora/",
-    des: "A beautifully crafted website using HTML and CSS to help users explore and discover their dream homes. The platform showcases a variety of houses with detailed descriptions and appealing visuals. The responsive design ensures a smooth and enjoyable browsing experience on any device.",
-    data: "12-5-2024",
-    lang: "html-css",
-    Framework: "no framework",
-    Libraries: "no libraries",
-    repo: "https://github.com/bilaldaadaa/Flora",
-    to: "/bilalportfolio/project/flora",
-    des2: "HTML-css3"
+const projects = [
+    {
+        id: "flora",
+        name: "Flora",
+        img: Flora,
+        demo: " https://bilaldaadaa.github.io/flora/",
+        des: "A beautifully crafted website using HTML and CSS to help users explore and discover their dream homes. The platform showcases a variety of houses with detailed descriptions and appealing visuals. The responsive design ensures a smooth and enjoyable browsing experience on any device.",
+        data: "12-5-2024",
+        lang: "html-css",
+        Framework: "no framework",
+        Libraries: "no libraries",
+        repo: "https://github.com/bilaldaadaa/Flora",
+        to: "/bilalportfolio/project/flora",
+        des2: "HTML-css3"
 
-},
-{
-    id: "sallastore",
-    name: "Salla Store",
-    img: SallaStore,
-    demo: " https://bilaldaadaa.github.io/flora/",
-    des: "A simple online store designed using HTML and CSS, showcasing a variety of electronic gadgets in an attractive and organized layout. It offers an easy browsing experience for viewing smartphones, tablets, and tech accessories. The design is responsive to ensure optimal viewing across all devices.",
-    data: "12-5-2024",
-    lang: "html-css",
-    Framework: "no framework",
-    Libraries: "no libraries",
-    repo: "https://github.com/bilaldaadaa/salla-store",
-    to: "/bilalportfolio/project/sallastore",
-    des2: "Html-css3"
-}]
+    },
+    {
+        id: "sallastore",
+        name: "Salla Store",
+        img: SallaStore,
+        demo: " https://bilaldaadaa.github.io/flora/",
+        des: "A simple online store designed using HTML and CSS, showcasing a variety of electronic gadgets in an attractive and organized layout. It offers an easy browsing experience for viewing smartphones, tablets, and tech accessories. The design is responsive to ensure optimal viewing across all devices.",
+        data: "12-5-2024",
+        lang: "html-css",
+        Framework: "no framework",
+        Libraries: "no libraries",
+        repo: "https://github.com/bilaldaadaa/salla-store",
+        to: "/bilalportfolio/project/sallastore",
+        des2: "Html-css3"
+    },
+    {
+
+        id: "dashboard",
+        name: "DashBoard",
+        img: dashboard,
+        repo: "https://github.com/bilaldaadaa/dashboread",
+        des: "An interactive dashboard built with React and Tailwind CSS, it displays user data in an organized and seamless manner.It features an elegant design and a seamless user experience across multiple devices.It demonstrates strong skills in building dynamic interfaces, managing status, and formatting content.",
+        data: "1-7-2025",
+        lang: "html-css-typescript",
+        Framework: "React",
+        Libraries: "axios , toast , react-router-dom , react-icont ",
+        demo: "https://dashboard-3ptb.vercel.app/",
+        to: "/bilalportfolio/project/dashborad",
+        des2: "React - tailwindCss"
+
+    }
+]
 
 const Project = () => {
     const { id } = useParams()
@@ -131,7 +150,7 @@ const Project = () => {
                     <div className="relative overflow-hidden">
                         <div className="flex justify-between transition-transform duration-1000 " style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                             {projects.map((project, index) => (
-                                <div key={index} className="flex-shrink-0 px-2 w-full md:w-1/2 gap-7 ">
+                                <div key={index} className="flex-shrink-0 px-2 w-full md:w-full gap-7 ">
                                     <MyProjectsCard
                                         projectImg={project.img}
                                         projectname={project.name}

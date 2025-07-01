@@ -1,12 +1,10 @@
 import { LuCircleDotDashed } from "react-icons/lu";
 import "./Hero.css"
-import { saveAs } from "file-saver";
-import cv from "../../assets/files/Bilal_Daadaa.pdf"
+
+import { Link } from "react-router-dom";
+
 
 const Hero = ({ hey, title, description, btn, background, myimg, Squares, }) => {
-    const Download = () => {
-        saveAs(cv, "cv.pdf")
-    };
 
 
     return (
@@ -22,9 +20,9 @@ const Hero = ({ hey, title, description, btn, background, myimg, Squares, }) => 
                     {description}
                 </p>
                 <div className="btn">
-                    <button onClick={Download} className="w-[155px] h-[50px]  bg-[#FFFFFF99] font-poppins font-semibold text-base text-[#1D2130] dark:bg-[#0C96E299] ">
+                    <Link to="https://drive.google.com/file/d/1zQ62MMhG1CJcQqyMCvp6lhIQ5_OSGOMG/view?usp=drivesdk"className="w-[155px] h-[50px]  bg-[#FFFFFF99] font-poppins font-semibold text-base text-[#1D2130] dark:bg-[#0C96E299] ">
                         {btn}
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div className="hidden h-[444.32px] bg-no-repeat bg-top relative sm:block " >
