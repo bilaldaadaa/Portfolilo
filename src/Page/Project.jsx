@@ -54,7 +54,7 @@ const projects = [
         Framework: "React",
         Libraries: "axios , toast , react-router-dom , react-icont ",
         demo: "https://dashboard-3ptb.vercel.app/",
-        to: "/project/dashborad",
+        to: "/project/dashboard",
         des2: "React - tailwindCss"
 
     }
