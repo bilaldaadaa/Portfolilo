@@ -8,7 +8,7 @@ import MainPage from './Page/MainPage.jsx'
 import Project from './Page/Project.jsx'
 
 const root = createBrowserRouter([{
-  path: '/bilalportfolio/',
+  path: '/',
   element: <Root />,
   children: [{
     path: '',
