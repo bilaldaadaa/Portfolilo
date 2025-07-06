@@ -32,7 +32,7 @@ const projects = [
         id: "sallastore",
         name: "Salla Store",
         img: SallaStore,
-        demo: " https://bilaldaadaa.github.io/flora/",
+        demo: " https://bilaldaadaa.github.io/salla-store/",
         des: "A simple online store designed using HTML and CSS, showcasing a variety of electronic gadgets in an attractive and organized layout. It offers an easy browsing experience for viewing smartphones, tablets, and tech accessories. The design is responsive to ensure optimal viewing across all devices.",
         data: "12-5-2024",
         lang: "html-css",
@@ -64,7 +64,7 @@ const Project = () => {
     const { id } = useParams()
     const project = projects.find(p => p.id === id)
     if (!project) {
-        return (<div className="">المشروع غير موجود</div>)
+        return (<div className="">not found</div>)
     }
 
     useEffect(() => {

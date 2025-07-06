@@ -1,11 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Spinner from "../../assets/img/Spinner.gif"
 const Contact = ({ title, Description, complementsDescription, infos }) => {
+    const [lodaing, setLodaing] = useState(false)
     const formRef = useRef();
     const sendEmail = (e) => {
+        setLodaing(true)
         e.preventDefault()
         emailjs
             .sendForm(
@@ -18,6 +20,7 @@ const Contact = ({ title, Description, complementsDescription, infos }) => {
                 () => {
                     toast.success("🚀 تم إرسال الرسالة بنجاح!");
                     formRef.current.reset();
+                    setLodaing(false)
                 },
                 (error) => {
                     toast.error("😓 فشل الإرسال، حاول مرة أخرى.");
@@ -51,15 +54,15 @@ const Contact = ({ title, Description, complementsDescription, infos }) => {
                 </div>
                 <form action="" ref={formRef} className="w-[779.78px] mb-[94px] " onSubmit={sendEmail}>
                     <div className="flex justify-between items-center mb-6 flex-wrap gap-5">
-                        <input type="text" name="from_name" id="" placeholder="Full name" className=" border-[1px] border-solid border-[#BEC0BF] rounded-lg w-[300px] lg:w-[375.53px] h-14 pl-[20px] py-4 bg-transparent dark:text-white"  required/>
-                        <input type="text" name="from_email" id="" placeholder="Your email" className=" border-[1px] border-solid border-[#BEC0BF] rounded-lg w-[300px] lg:w-[375.53px] h-14 pl-[20px] py-4 bg-transparent dark:text-white"  required/>
+                        <input type="text" name="from_name" id="" placeholder="Full name" className=" border-[1px] border-solid border-[#BEC0BF] rounded-lg w-[300px] lg:w-[375.53px] h-14 pl-[20px] py-4 bg-transparent dark:text-white" required />
+                        <input type="text" name="from_email" id="" placeholder="Your email" className=" border-[1px] border-solid border-[#BEC0BF] rounded-lg w-[300px] lg:w-[375.53px] h-14 pl-[20px] py-4 bg-transparent dark:text-white" required />
                     </div>
                     <div className="mb-6">
                         <input type="text" name="phone" id="" placeholder="Phone number" className="border-[1px] border-solid border-[#BEC0BF] rounded-lg w-[300.53px] lg:w-[777.78px] h-14 pl-[20px] py-4 bg-transparent dark:text-white" required />
                     </div>
                     <textarea name="message" id="" placeholder="Message" className="w-[300.53px] lg:w-[779.78px] h-[170px] border-[1px] border-solid border-[#BEC0BF] pl-[20px] py-4 rounded-lg mb-5 bg-transparent dark:text-white" required ></textarea>
                     <div className="btn">
-                        <button type="submit" className="w-[200px] h-[50px] bg-[#0C96E2] rounded-lg text-white font-inter font-medium" >Send Message</button>
+                        <button type="submit" className="w-[200px] h-[50px] bg-[#0C96E2] rounded-lg text-white font-inter font-medium flex justify-center items-center" >{lodaing == true ? <img className="w-[50px] " src={Spinner} alt="" /> : "Send Messages"}</button>
                     </div>
                 </form>
             </div>

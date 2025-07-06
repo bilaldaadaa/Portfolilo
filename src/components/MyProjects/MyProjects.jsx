@@ -19,7 +19,7 @@ const MyProjects = ({ title, complementstitle, btn, imgbtn, onclick }) => {
         id: "sallastore",
         name: "Salla Store",
         img: SallaStore,
-        demo: " https://bilaldaadaa.github.io/flora/",
+        demo: " https://bilaldaadaa.github.io/salla-store/",
         des: "Html-css3"
     }, {
         id: "dashboard",
