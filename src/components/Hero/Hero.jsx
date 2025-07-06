@@ -19,8 +19,8 @@ const Hero = ({ hey, title, description, btn, background, myimg, Squares, }) => 
                 <p className="text-[#43495B] font-poppins font-normal text-lg max-w-[370px] mb-[30px] opacity-[0.87] dark:text-white  ">
                     {description}
                 </p>
-                <div className="btn">
-                    <Link to="https://drive.google.com/file/d/1zQ62MMhG1CJcQqyMCvp6lhIQ5_OSGOMG/view?usp=drivesdk"className="w-[155px] h-[50px]  bg-[#FFFFFF99] font-poppins font-semibold text-base text-[#1D2130] dark:bg-[#0C96E299] ">
+                <div className="w-[155px] h-[50px]  bg-[#FFFFFF99] font-poppins font-semibold text-base text-[#1D2130] dark:bg-[#0C96E299] flex justify-center items-center  ">
+                    <Link to="https://drive.google.com/file/d/1zQ62MMhG1CJcQqyMCvp6lhIQ5_OSGOMG/view?usp=drivesdk" className="">
                         {btn}
                     </Link>
                 </div>
